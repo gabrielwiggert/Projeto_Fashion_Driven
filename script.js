@@ -1,0 +1,1 @@
+//inicializando script
