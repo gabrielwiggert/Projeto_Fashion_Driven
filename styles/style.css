@@ -4,5 +4,157 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background-color: #404EED;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.logo-titulo {
+    margin-left: 64px;
+    padding: 16px;
+}
+
+main {
+    display: flex;
+}
+
+.menu {
+    width: 50vw;
+    background-color: white;
+}
+
+.imagem {
+    width: 50vw;
+    background-color: #404EED;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagem img {
+    width: 400px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    margin-top: 38px;
+}
+
+.escolhas {
+    width: 400px;
+}
+
+.opcoes {
+    display: flex;
+    justify-content: space-between;
+}
+
+.opcoes img {
+    padding: 5px;
+    width: 80px;
+}
+
+.icone {
     background-color: #F2F2F2;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.opcao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    background-color: #F2F2F2;
+    border: none;
+    width: 396px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+input::placeholder {
+    padding: 15px;
+}
+
+button {
+    margin-top: 23px;
+    margin-bottom: 40px;
+    background-color: #C4C4C4;
+    color: white;
+    border: none;
+    width: 396px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+footer {
+    background-color: #F2F2F2;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.pedido, .caixa, .caixa img {
+    background-color: white;
+}
+
+.ultimos-pedidos {
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.ultimos-pedidos h3 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.ultimos-pedidos span {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.ultimos-pedidos p {
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.ultimos-pedidos .pedido {
+    width: 200px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+
+.caixa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ultimos-pedidos img {
+    padding-bottom: 9px;
+    max-height: 189px;
+}
+
+.showroom {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.showroom .pedido {
+    margin-right: 16px;
 }
