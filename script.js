@@ -102,8 +102,32 @@ function enviarPedido() {
 
 function sucesso() {
     alert("Pedido confirmado!");
+    pegarUltimosPedidos();
 }
 
 function erro() {
     alert("Ops, não conseguimos processar sua encomenda");
 }
+
+function pegarUltimosPedidos() {
+    const resposta = axios.get("https://mock-api.driven.com.br/api/v4/shirts-api/shirts");
+    resposta.then(renderizarPedidos);
+  }
+
+function renderizarPedidos(resposta) {
+    let blusas = resposta.data;
+    let div = document.querySelector('.showroom');
+    div.innerHTML = "";
+    for (let i = 0; i < 5; i++) {
+        div.innerHTML += `
+        <div class="pedido">
+        <div class="caixa">
+            <img src="${blusas[i].image}"/>
+        </div>
+        <p><span>Criador:</span> ${blusas[i].owner}</p>
+        </div>
+        `
+    }
+}
+
+pegarUltimosPedidos();
