@@ -168,3 +168,7 @@ footer {
     border-width: 3px;
     border-color: #404EED;
 }
+
+.botaoUltimosPedidos {
+    background-color: green;
+}

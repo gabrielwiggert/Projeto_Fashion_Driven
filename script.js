@@ -1,4 +1,4 @@
-const nome = prompt("Qual o seu nome?");
+let nome = prompt("Qual o seu nome?");
 
 let selecionado1 = 0;
 let selecionado2 = 0;
@@ -8,6 +8,7 @@ let input = "";
 let model = "";
 let neck = "";
 let material = "";
+let blusasGlobal = [];
 
 function selecionarItem1(opcao) {
 
@@ -119,13 +120,30 @@ function renderizarPedidos(resposta) {
     let div = document.querySelector('.showroom');
     div.innerHTML = "";
     for (let i = 0; i < 5; i++) {
+        blusasGlobal[i] = blusas[i];
         div.innerHTML += `
-        <div class="pedido">
+        <div class="pedido" id="${i}" onclick="escolherBlusaPronta(this)">
         <div class="caixa">
             <img src="${blusas[i].image}"/>
         </div>
         <p><span>Criador:</span> ${blusas[i].owner}</p>
         </div>
+        `
+    }
+}
+
+function escolherBlusaPronta(blusa) {
+    let i = parseInt(blusa.id);
+    model = blusasGlobal[i].model;
+    neck = blusasGlobal[i].neck;
+    material = blusasGlobal[i].material;
+    nome = blusasGlobal[i].owner;
+    input.value = blusasGlobal[i].image;
+
+    let div = document.querySelector('.showroom');
+    if (document.querySelector('.showroom button') == null) {
+        div.innerHTML += `
+        <button class="botaoUltimosPedidos" onclick="enviarPedido()">Confirmar</button>
         `
     }
 }
